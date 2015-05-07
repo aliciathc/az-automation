@@ -6,7 +6,7 @@ datenow=`date +%m-%d-%y`
 workweek=`date +%V`
 
 ######Define file path#######
-f1="/home/$user"
+f1="/$user"
 f2="$f1/az_automation"
 f3="$f2/snapshot"
 f4="$f3/SubscriptionID.txt"
@@ -55,7 +55,7 @@ fi
 rm -rf $f3/*
 
 #Output subsciption ID
-azure account list|awk 'NR>3'|awk '{print $(NF-1)}'|head -n -1 > $f4
+azure account list|awk 'NR>3'|awk '{print $(NF-2)}'|head -n -1 > $f4
 #azure account list|awk 'NR>3'|awk '{print $2,$3,$4}'|head -n -1 > $f6
 
 #output VM list

@@ -5,7 +5,7 @@ user=`whoami`
 datenow=`date +%m-%d-%y`
 
 ######Define file path#######
-f1="/home/$user"
+f1="/$user"
 f2="$f1/az_automation"
 f3="$f2/vmstatus"
 f4="$f3/SubscriptionID.txt"
@@ -58,7 +58,7 @@ rm -rf $f3/*
 
 
 #Output subsciption ID
-azure account list|awk 'NR>3'|awk '{print $(NF-1)}'|head -n -1 > $f4
+azure account list|awk 'NR>3'|awk '{print $(NF-2)}'|head -n -1 > $f4
 
 #output VM list
 echo "creating azure vm list..."
