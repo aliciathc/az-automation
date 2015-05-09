@@ -1,7 +1,7 @@
 ###Azure - Capture a Snapshot Image from Running VM###
 
 1.      Cronjob:
-            i.  Automation scripts will perform specialized snapshot on weekly basis on every Saturday at 20.00.
+            i.  Automation scripts will perform specialized snapshot on weekly basis on every Saturday
  
 2.      Manually run in Linux terminal. The script will backup according to the defined subscription :
             i. To run single subscription:
