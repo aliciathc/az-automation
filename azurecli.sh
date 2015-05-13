@@ -2,6 +2,10 @@
 
 set -e
 
+echo "Update packges..."
+sudo apt-get update
+sleep 3
+
 echo "Installing nodejs-legacy.."
 sudo apt-get install nodejs-legacy -y
 sleep 3
@@ -31,7 +35,8 @@ echo "Installing azure-cli..."
 sudo npm install -g azure-cli 
 sleep 3
 
+echo "##############################################"
 echo "All Installation packages has been completed!"
-
+echo "##############################################"
 
 
